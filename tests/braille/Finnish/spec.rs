@@ -217,3 +217,15 @@ fn p9_units_degrees_fahrenheit() {
     let expr = "<math><mn>−43</mn><mi>˚</mi><mi>F</mi></math>";
     test_braille("Finnish", expr, "⠤⠼⠙⠉⠀⠴⠠⠋");
 }
+
+#[test]
+fn p10_currency_euro() {
+    let expr = "<math><mn>6</mn><mi>€</mi><mn>15</mn><mi>snt</mi></math>";
+    test_braille("Finnish", expr, "⠼⠋⠀⠈⠑⠀⠼⠁⠑⠀⠎⠝⠞");
+}
+
+#[test]
+fn p10_currency_dollar() {
+    let expr = "<math><mi>$</mi><mn>25</mn></math>";
+    test_braille("Finnish", expr, "⠇⠼⠃⠑");
+}
