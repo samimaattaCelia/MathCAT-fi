@@ -12,6 +12,8 @@
 // For example, "fraction_6_1_1" is a fraction example from section 6.1, and is the first example there.
 use crate::common::*;
 
+// Original UEB tests (not translated yet)
+
 #[test]
 fn calculation_marks_1() {
     let expr = "<math><mn>3</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>7</mn></math>";
@@ -106,4 +108,55 @@ fn chemistry_2_8() {
     // From MathType
     let expr = "<math><msup><mrow><mtext>Cu</mtext></mrow><mrow><mn>2</mn><mo>+</mo></mrow></msup></math>";
     test_braille("Finnish", expr, "⠠⠉⠥⠬⠦⠼⠃⠀⠖⠴⠀");
+}
+
+// Finnish spec tests
+// Page and some other identification has been added to the function name, so you can figure out which expression the test in based on. Some tests are variations of the "official" test.
+
+#[test]
+fn p7_thousands_nbsp() {
+    let expr = "<math><mn>2 000 000</mn></math>";
+    test_braille("Finnish", expr, "");
+}
+
+#[test]
+fn p7_thousands_point() {
+    let expr = "<math><mn>2.000.000</mn></math>";
+    test_braille("Finnish", expr, "");
+}
+
+#[test]
+fn p7_thousands_space() {
+    let expr = "<math><mn>2 000 000</mn></math>";
+    test_braille("Finnish", expr, "");
+}
+
+#[test]
+fn p7_decimal_comma() {
+    let expr = "<math><mn>5,12575</mn></math>";
+    test_braille("Finnish", expr, "");
+}
+
+#[test]
+fn p7_decimal_point() {
+    let expr = "<math><mn>5.12575</mn></math>";
+    test_braille("Finnish", expr, "");
+}
+
+#[test]
+fn p7_decimal_point_endless_no_grouping() {
+    let expr = "<math><mn>1,234657234...</mn></math>";
+    test_braille("Finnish", expr, "");
+}
+
+#[test]
+fn p7_decimal_point_endless_with_grouping_space() {
+    let expr = "<math><mn>1,234 657 234...</mn></math>";
+    test_braille("Finnish", expr, "");
+}
+
+#[test]
+fn p7_decimal_point_endless_with_grouping_nbsp() {
+    let expr = "<math><mn>1,234 657 234...</mn></math>";
+    test_braille("Finnish", expr, "");
 }
