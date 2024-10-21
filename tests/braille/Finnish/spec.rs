@@ -160,3 +160,51 @@ fn p7_decimal_point_endless_with_grouping_nbsp() {
     let expr = "<math><mn>1,234 657 234...</mn></math>";
     test_braille("Finnish", expr, "");
 }
+
+#[test]
+fn p7_decimal_point_endless_with_grouping_nbsp_ellipses() {
+    let expr = "<math><mn>1,234 657 234…</mn></math>";
+    test_braille("Finnish", expr, "");
+}
+
+#[test]
+fn p7_decimal_point_endless_no_grouping_ellipses() {
+    let expr = "<math><mn>1,234657234…</mn></math>";
+    test_braille("Finnish", expr, "");
+}
+
+#[test]
+fn p7_decimal_point_endless_with_grouping_space_ellpses() {
+    let expr = "<math><mn>1,234 657 234…</mn></math>";
+    test_braille("Finnish", expr, "");
+}
+
+#[test]
+fn p9_units_percent() {
+    let expr = "<math><mn>9</mn><mi>%</mi></math>";
+    test_braille("Finnish", expr, "⠼⠊⠊⠀⠹");
+}
+
+#[test]
+fn p9_units_permille() {
+    let expr = "<math><mn>9</mn><mi>‰</mi></math>";
+    test_braille("Finnish", expr, "⠼⠁⠁⠑⠀⠒⠹");
+}
+
+#[test]
+fn p9_units_degrees() {
+    let expr = "<math><mn>100</mn><mi>˚</mi></math>";
+    test_braille("Finnish", expr, "⠼⠁⠚⠚⠀⠴");
+}
+
+#[test]
+fn p9_units_degrees_celsius() {
+    let expr = "<math><mn>37</mn><mi>˚</mi><mi>C</mi></math>";
+    test_braille("Finnish", expr, "⠼⠉⠛⠀⠴⠠⠉");
+}
+
+#[test]
+fn p9_units_degrees_fahrenheit() {
+    let expr = "<math><mn>−43</mn><mi>˚</mi><mi>F</mi></math>";
+    test_braille("Finnish", expr, "⠤⠼⠙⠉⠀⠴⠠⠋");
+}
