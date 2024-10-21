@@ -17,13 +17,13 @@ use crate::common::*;
 #[test]
 fn calculation_marks_1() {
     let expr = "<math><mn>3</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>7</mn></math>";
-    test_braille("Finnish", expr, "⠼⠉⠀⠖⠼⠙⠀⠶⠼⠛");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
 fn calculation_marks_7() {
     let expr = "<math><mrow><mi>&#x03C0;</mi><mo>&#x2248;</mo><mn>3,14</mn></mrow></math>";
-    test_braille("Finnish", expr, "⠨⠏⠀⠸⠶⠼⠉⠂⠁⠙");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
@@ -31,13 +31,13 @@ fn fraction_10() {
     let expr = "<math>
         <mfrac><mn>3</mn><mn>4</mn></mfrac><mo>+</mo>
         <mfrac><mn>1</mn><mn>4</mn></mfrac><mo>=</mo><mn>1</mn></math>";
-    test_braille("Finnish", expr, "⠼⠉⠲⠀⠖⠼⠁⠲⠀⠶⠼⠁");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
 fn fraction_13() {
     let expr = "<math><mfrac><mn>5</mn><mn>4</mn></mfrac><mo>=</mo><mn>1</mn><mfrac><mn>1</mn><mn>4</mn></mfrac></math>";
-    test_braille("Finnish", expr, "⠼⠑⠲⠀⠶⠼⠁⠼⠁⠲");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
@@ -48,7 +48,7 @@ fn fraction_equations_3() {
             <mrow><mn>6</mn><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>x</mi><mo>)</mo></mrow>
         </mfrac>
     </math>";
-    test_braille("Finnish", expr, "⠼⠙⠀⠭⠀⠌⠦⠼⠋⠀⠦⠼⠁⠀⠤⠭⠴⠴");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
@@ -57,13 +57,13 @@ fn fraction_equations_6() {
         <mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow>
         <mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>&#x2212;</mo><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow>
     </mfrac></math>";
-    test_braille("Finnish", expr, "⠦⠼⠁⠆⠀⠖⠼⠁⠒⠠⠴⠀⠌⠦⠼⠁⠲⠀⠤⠼⠁⠢⠠⠴");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
 fn powers_3() {
     let expr = "<math><msup><mn>2</mn><mn>3</mn></msup><mo>+</mo><mn>5</mn></math>";
-    test_braille("Finnish", expr, "⠼⠃⠬⠼⠉⠀⠖⠼⠑");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
@@ -74,44 +74,53 @@ fn powers_6() {
         <mn>1</mn><mtext>&#x2009;</mtext><mn>048</mn><mtext>&#x2009;</mtext><mn>576</mn>
     </math>
    ";
-    test_braille("Finnish", expr, "⠼⠃⠬⠼⠃⠚⠀⠶⠼⠁⠄⠚⠙⠓⠄⠑⠛⠋");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
 fn roots_5() {
     let expr = "<math><msup><mn>27</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mo>=</mo>
                         <mroot><mn>27</mn><mn>3</mn></mroot><mo>=</mo><mn>3</mn></math>";
-    test_braille("Finnish", expr, "⠼⠃⠛⠬⠼⠁⠒⠀⠶⠩⠼⠉⠐⠼⠃⠛⠀⠶⠼⠉");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
 fn roots_7() {
     let expr = "<math><msqrt><mn>20</mn><mo>+</mo><mn>5</mn></msqrt><mo>=</mo><msqrt><mn>25</mn></msqrt><mo>=</mo><mn>5</mn></math>";
-    test_braille("Finnish", expr, "⠩⠦⠼⠃⠚⠀⠖⠼⠑⠀⠴⠀⠶⠩⠼⠃⠑⠀⠶⠼⠑");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
 fn vectors_1() {
     let expr = "<math><mover><mi>a</mi><mo>&#xAF;</mo></mover></math>";
-    test_braille("Finnish", expr, "⠁⠱");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
 fn chemistry_2_4() {
     // From MathType
     let expr = "<math><msub><mtext>C</mtext><mn>2</mn></msub><msub><mtext>H</mtext><mn>5</mn></msub><mtext>OH</mtext></math>";
-    test_braille("Finnish", expr, "⠠⠉⠼⠆⠠⠓⠼⠢⠠⠕⠠⠓");
+    test_braille("Finnish", expr, "");
 }
 
 #[test]
 fn chemistry_2_8() {
     // From MathType
     let expr = "<math><msup><mrow><mtext>Cu</mtext></mrow><mrow><mn>2</mn><mo>+</mo></mrow></msup></math>";
-    test_braille("Finnish", expr, "⠠⠉⠥⠬⠦⠼⠃⠀⠖⠴⠀");
+    test_braille("Finnish", expr, "");
 }
 
 // Finnish spec tests
 // Page and some other identification has been added to the function name, so you can figure out which expression the test in based on. Some tests are variations of the "official" test.
+
+// Grouping numbers
+
+// No example in the specs
+#[test]
+fn p7_no_grouping_in_four_digit_numbers() {
+    let expr = "<math><mn>2000</mn></math>";
+    test_braille("Finnish", expr, "");
+}
 
 #[test]
 fn p7_thousands_nbsp() {
