@@ -15,12 +15,6 @@ use crate::common::*;
 // Original UEB tests (not translated yet)
 
 #[test]
-fn calculation_marks_1() {
-    let expr = "<math><mn>3</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>7</mn></math>";
-    test_braille("Finnish", expr, "");
-}
-
-#[test]
 fn calculation_marks_7() {
     let expr = "<math><mrow><mi>&#x03C0;</mi><mo>&#x2248;</mo><mn>3,14</mn></mrow></math>";
     test_braille("Finnish", expr, "");
@@ -227,5 +221,48 @@ fn p10_currency_euro() {
 #[test]
 fn p10_currency_dollar() {
     let expr = "<math><mi>$</mi><mn>25</mn></math>";
+    test_braille("Finnish", expr, "⠠⠙⠼⠉⠑");
+}
+
+#[test]
+fn p10_currency_pound() {
+    let expr = "<math><mi>£</mi><mn>25</mn></math>";
     test_braille("Finnish", expr, "⠇⠼⠃⠑");
+}
+
+#[test]
+fn p11_mm_squared() {
+    let expr = "<math><msup><mi>mm</mi><mn>2</mn></msup></math>";
+    test_braille("Finnish", expr, "⠍⠍⠬");
+}
+
+#[test]
+fn p11_cm_cubed() {
+    let expr = "<math><msup><mi>cm</mi><mn>3</mn></msup></math>";
+    test_braille("Finnish", expr, "⠉⠍⠬⠼⠉");
+}
+
+#[test]
+fn p13_plus() {
+    let expr = "<math><mn>3</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>7</mn></math>";
+    test_braille("Finnish", expr, "⠼⠉⠀⠖⠼⠙⠀⠶⠼⠛");
+}
+
+#[test]
+fn p13_minus_not_equal() {
+    let expr = "<math><mn>5</mn><mo>−</mo><mn>4</mn><mo>≠</mo><mn>2</mn></math>";
+    test_braille("Finnish", expr, "⠼⠑⠀⠤⠼⠃⠀⠐⠶⠼⠃");
+}
+
+// Question mark is the same as in literary text.
+#[test]
+fn p13_times_with_question_mark() {
+    let expr = "<math><mn>27</mn><mo>·</mo><mn>3</mn><mo>=</mo><mi>?</mi></math>";
+    test_braille("Finnish", expr, "⠼⠃⠛⠀⠄⠼⠉⠀⠶⠢");
+}
+
+#[test]
+fn p13_times_with_question_mark() {
+    let expr = "<math><mo>(</mo><mn>3</mn><mo>&#8290;</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo>&#8290;</mo><mi>y</mi><mo>)</mo><mo>&#8290;</mo><mo>(</mo><mn>2</mn><mo>&#8290;</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo></math>";
+    test_braille("Finnish", expr, "⠦⠼⠉⠀⠭⠀⠖⠼⠃⠀⠽⠴⠀⠦⠼⠃⠀⠭⠀⠤⠼⠁⠴");
 }
