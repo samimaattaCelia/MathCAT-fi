@@ -114,22 +114,22 @@
     "erg": "ergi", # ergiä
 
     # powers of 2 used with bits and bytes
-    "Kib": "kibibitti", # kibibittiä
-    "Mib": "mebibitti", # mebibittiä
-    "Gib": "gibibitti", # gibibittiä
-    "Tib": "tebibitti", # tebibittiä
-    "Pib": "pebibitti", # pebibittiä
-    "Eib": "eksbibitti", # eksbibittiä
-    "Zib": "tsebibitti", # tsebibittiä
-    "Yib": "jobibitti", # jobibittiä
-    "KiB": "kibitavu", # kibitavua
-    "MiB": "mebitavu", # mebitavua
-    "GiB": "gibitavu", # gibitavua
-    "TiB": "tebitavu", # tebitavua
-    "PiB": "pebitavu", # eksbitavua
-    "EiB": "eksbitavu", # eksbitavua
-    "ZiB": "tsebitavu", # tsebitavua
-    "YiB": "jobitavu", # jobitavua
+    "Kib": "kibi-bitti", # kibi-bittiä
+    "Mib": "mebi-bitti", # mebi-bittiä
+    "Gib": "gibi-bitti", # gibi-bittiä
+    "Tib": "tebi-bitti", # tebi-bittiä
+    "Pib": "pebi-bitti", # pebi-bittiä
+    "Eib": "eksbi-bitti", # eksbi-bittiä
+    "Zib": "tsebi-bitti", # tsebi-bittiä
+    "Yib": "jobi-bitti", # jobi-bittiä
+    "KiB": "kibi-tavu", # kibi-tavua
+    "MiB": "mebi-tavu", # mebi-tavua
+    "GiB": "gibi-tavu", # gibi-tavua
+    "TiB": "tebi-tavu", # tebi-tavua
+    "PiB": "pebi-tavu", # eksbi-tavua
+    "EiB": "eksbi-tavu", # eksbi-tavua
+    "ZiB": "tsebi-tavu", # tsebi-tavua
+    "YiB": "jobi-tavu", # jobi-tavua
   }
 
   # this will only be used if the language is English, so it can be empty for other countries
@@ -224,14 +224,6 @@
     "ruokalusikka": "ruokalusikallista",
     "maili tunnissa": "mailia tunnissa",
     "maili gallonalla": "mailia gallonalla",
-    "kibibitti": "kibibittiä",
-    "mebibitti": "mebibittiä", 
-    "gibibitti": "gibibittiä", 
-    "tebibitti": "tebibittiä", 
-    "pebibitti": "pebibittiä", 
-    "eksbibitti": "eksbibittiä", 
-    "tsebibitti": "tsebibittiä",
-    "jobibitti": "jobibittiä",
     "annum": "annumia",
     "curie": "curieta"
   }
